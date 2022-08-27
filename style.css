@@ -60,19 +60,19 @@ body{
 .home{
     margin-top: 10rem;
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 4rem;
 }
 .hero{
     position: absolute;
-    top: 7rem;
+    top: -4rem;
     right: 0;
-    left: 0;
-    margin: auto;
+    left:-40px;
+    /* margin: auto; */
     width: 300px;
     z-index: 9;
 }
 .background{
-    /* position: absolute; */
+    position: relative;
     width: 80%;
     margin-left: auto;
     height: 11rem;
@@ -80,6 +80,31 @@ body{
     border-bottom-left-radius: 10rem;
     background-color: var(--soft-blue);
     z-index: 2;
+}
+.landingtext--sec{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+.landingtext--sec h1{
+    margin-bottom: 2rem;
+}
+.landingtext--sec p{
+    color: var(--grayish-blue);
+    margin-bottom: 2rem;
+}
+.btn-chrome, .btn-firefox{
+    padding: 1rem;
+    border: none;
+   font-size: 16px;
+    border-radius: 6px;
+}
+.btn-chrome{
+    background-color: var(--soft-blue);
+     color: white;
+}
+.btn-firefox{
+    background-color: var(--grayish-blue);
 }
 
 @media screen and (max-width: 700px) {
@@ -132,5 +157,19 @@ body{
 @media screen and (min-width: 700px){
     .hamburger{
         display: none;
+    }
+    .home{
+        grid-template-columns:1fr 1fr;
+    }
+    .landingtext--sec {
+        grid-row-end: none;
+    }
+    .background{
+        margin-right: 0;
+        
+    }
+    .hero{
+        margin: 0;
+        left:-40px;
     }
 }
