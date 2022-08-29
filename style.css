@@ -135,6 +135,7 @@ body{
     margin: auto;
     position: relative;
     padding: 2rem ;
+    cursor: pointer;
 }
 .tabs p::after{
     content: '';
@@ -184,13 +185,36 @@ body{
      
 }
 .extension_card{
-    display: grid;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+    width: fit-content;
 }
 .card{
-    /*some shitty box shadow*/
-    box-shadow: 23px 37px 48px black ;
+    /* border: 1px solid #000000; */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     border-radius: 1rem;
+    /* height: 400px; */
+    width: fit-content;
+   display: grid;
+   padding: 1rem;
+   margin-bottom: 2rem;
+}
+.card img{
+    margin: 2rem auto;
+  
+}
+.card p, .card h1{
+    text-align: center;
+    margin: 0;
+}
+.bt{
+    padding: 1rem 3rem;
+    background-color: var(--soft-blue);
+    color: white;
+    border: none;
+    border-radius: .5rem;
 }
 @media screen and (max-width: 700px) {
     .right{
@@ -269,7 +293,7 @@ body{
     .ans{
         width: fit-content;
     }
-    .extension_card{
-        grid-template-columns: 1fr 1fr 1fr;
+    .card{
+        margin-right: 1rem;
     }
 }
