@@ -61,6 +61,7 @@ body{
     margin-top: 10rem;
     display: grid;
     grid-gap: 4rem;
+    margin-bottom: 4rem;
 }
 .hero{
     position: absolute;
@@ -106,7 +107,91 @@ body{
 .btn-firefox{
     background-color: var(--grayish-blue);
 }
+.features{
+    text-align: center;
+    /* width:90%; */
+    margin: auto;
+}
+.features h1{
+    margin-bottom: 2rem;
+}
+.features p, .tabs p{
+    color:hsl(229, 8%, 60%);
+}
+.features p{
+    width: 90%;
+    margin: auto;
+}
+.tabs{
+    display: flex;
+    flex-direction: column ;
+    width:90%;
+    margin: auto;
+}
+.tabs p{
+    font-weight: 400;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    padding: 2rem ;
+}
+.tabs p::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    background-color: var(--soft-red);
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    transition: .5s;
+}
+.tabs p:hover::after{
+    width: 100%;
+}
+.line, .line2{
+    width: calc(100% - 2rem);
+    height: 1px;
+    background-color: var(--grayish-blue);
+    margin: auto;
+}
+.line{
+    display: block
+}
+.background2{
+    position: relative;
+    width: 60%;
+    margin-right: auto;
+    height: 11rem;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    background-color: var(--soft-blue);
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+.background2 img{
+    position: absolute;
+    top: -3rem;
+    left:  2rem;
+    /* margin: auto; */
+    width: 300px;
+    z-index: 9;
+    
+}
+.tab_cont{
+    display: grid;
+    margin: 7rem 0;
+     
+}
+.extension_card{
+    display: grid;
 
+}
+.card{
+    /*some shitty box shadow*/
+    box-shadow: 23px 37px 48px black ;
+    border-radius: 1rem;
+}
 @media screen and (max-width: 700px) {
     .right{
         position: fixed;
@@ -171,5 +256,20 @@ body{
     .hero{
         margin: 0;
         left:-40px;
+    }
+    .tabs{
+        flex-direction: row;
+    }
+    .line{
+        display: none;
+    }
+    .tab_cont{
+        grid-template-columns: 1fr 1fr;
+    }
+    .ans{
+        width: fit-content;
+    }
+    .extension_card{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
