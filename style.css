@@ -195,11 +195,17 @@ body{
     /* border: 1px solid #000000; */
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     border-radius: 1rem;
-    /* height: 400px; */
+    height: 400px;
     width: fit-content;
    display: grid;
    padding: 1rem;
    margin-bottom: 2rem;
+}
+.card:nth-child(2){
+    margin-top: 4rem;
+}
+.card:nth-child(3){
+    margin-top: 8rem;
 }
 .card img{
     margin: 2rem auto;
