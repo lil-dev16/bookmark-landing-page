@@ -191,6 +191,15 @@ body{
     margin: 2rem auto;
     width: fit-content;
 }
+.extensions p{
+    color: var(--grayish-blue);
+    width: 90%;
+    margin: auto;
+    
+}
+.extensions, .faqs{
+    text-align: center;
+}
 .card{
     /* border: 1px solid #000000; */
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -221,6 +230,45 @@ body{
     color: white;
     border: none;
     border-radius: .5rem;
+}
+.faqs{
+    width: 80%;
+    margin: auto;
+}
+.faqs h1{
+    margin-bottom: 1rem;
+}
+.faq_main{
+    display: grid;
+    margin: 2rem auto;
+}
+.question_title{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.question{
+    font-size: 20px;
+}
+.answer{
+    color: var(--grayish-blue);
+    display: none;
+}
+.cont hr{
+    margin: 1rem 0;
+}
+.show-text .answer{
+    display: block;
+}
+.arrow{
+    transition: .5s;
+}
+.turn{
+    transform: rotate(180deg);
+    transition: .5s;
+    fill: black;
+    stroke: var(--soft-red);
 }
 @media screen and (max-width: 700px) {
     .right{

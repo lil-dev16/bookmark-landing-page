@@ -43,3 +43,16 @@ const menu = document.querySelector('.right');
          })
       })
    })
+
+   const arrow = document.querySelectorAll('.arrow');
+   const answers = document.querySelectorAll('.answer');
+
+   arrow.forEach(arr=>{
+      arr.addEventListener('click', (e)=>{
+         const elem = e.target.parentElement.parentElement;
+         elem.classList.toggle('show-text');
+         console.log(elem);
+         const le = e.target;
+         le.classList.toggle('turn');
+      })
+   })
