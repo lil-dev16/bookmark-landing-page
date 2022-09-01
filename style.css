@@ -8,7 +8,7 @@
     --soft-blue: hsl(231, 69%, 60%);
     --soft-red: hsl(0, 94%, 66%);
     --grayish-blue: hsl(229, 8%, 60%);
-    --dark-blue: hsl(229, 31%, 21%);
+    --dark-blue: hsla(229, 31%, 21%, 0.935);
 }
 body{
     font-family: sans-serif;
@@ -39,6 +39,7 @@ body{
     list-style: none;
     margin-right: 2rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .right{
     display: flex;
@@ -51,11 +52,17 @@ body{
     z-index: 99;
 }
 .btn{
-    padding: 10px;
+    padding: 10px 30px;
     background-color: var(--soft-red);
     color: white;
     border: none;
     border-radius:5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color: var(--soft-red);
+    border: 2px solid var(--soft-red)
 }
 .home{
     margin-top: 10rem;
@@ -99,6 +106,7 @@ body{
     border: none;
    font-size: 16px;
     border-radius: 6px;
+    cursor: pointer;
 }
 .btn-chrome{
     background-color: var(--soft-blue);
@@ -106,6 +114,16 @@ body{
 }
 .btn-firefox{
     background-color: var(--grayish-blue);
+}
+.btn-chrome:hover, .bt:hover{
+    background-color: white;
+     color: var(--soft-blue);
+     border: 2px solid var(--soft-blue);
+}
+.btn-firefox:hover{
+    background-color: white;
+     color: black;
+     border: 2px solid black;
 }
 .features{
     text-align: center;
@@ -120,7 +138,8 @@ body{
 }
 .features p{
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 .tabs{
     display: flex;
@@ -128,7 +147,10 @@ body{
     width:90%;
     margin: auto;
 }
-.tabs p{
+.text{
+ margin-bottom: 2rem;       
+}
+.tabsp{
     font-weight: 400;
     font-size: 20px;
     width: fit-content;
@@ -137,18 +159,21 @@ body{
     padding: 2rem ;
     cursor: pointer;
 }
-.tabs p::after{
+.tabsp::after{
     content: '';
     position: absolute;
     width: 0;
     background-color: var(--soft-red);
     height: 5px;
-    left: 0;
+    left: 15%;
     bottom: 0;
     transition: .5s;
 }
-.tabs p:hover::after{
-    width: 100%;
+.tabsp:hover::after{
+    width: 70%;
+}
+.tabsp:hover{
+    color: var(--soft-red);
 }
 .line, .line2{
     width: calc(100% - 2rem);
@@ -230,6 +255,7 @@ body{
     color: white;
     border: none;
     border-radius: .5rem;
+    cursor: pointer;
 }
 .faqs{
     width: 80%;
@@ -247,9 +273,13 @@ body{
     padding: 1rem;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 .question{
     font-size: 20px;
+}
+.question_title:hover{
+    color: var(--soft-red);
 }
 .answer{
     color: var(--grayish-blue);
@@ -264,18 +294,101 @@ body{
 .arrow{
     transition: .5s;
 }
-.turn{
-    transform: rotate(180deg);
+.show-text .arrow{
+    /* transform: rotate(180deg); */
     transition: .5s;
-    fill: black;
-    stroke: var(--soft-red);
 }
 .newsletter{
     margin-top: 5rem;
     background-color: var(--soft-blue);
     color: white;
     text-align: center;
+    height: 70vh;
 }
+.newsletter p{
+    padding: 8rem 0 0 0;
+    word-spacing: 10px;
+    letter-spacing: 10px;
+    font-weight: 600;
+}
+.newsletter h2{
+    padding: 3rem 0;
+    font-weight: 100;
+    font-size: 35px;
+}
+.form{
+    display: grid;
+    grid-gap: 2rem;
+    width: 70%;
+    margin: auto;
+}
+.form input{
+    
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 19px;
+}
+.form button{
+    padding: 1rem;
+    background-color: var(--soft-red);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 19px;
+    cursor: pointer;
+}
+.form button:hover{
+    color: var(--soft-red);
+    background-color: white;
+    border: 2px solid var(--soft-red);
+}
+.footer{
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.left p{
+margin-top: 2rem;
+}
+.left p:hover{
+    color: var(--soft-red);
+}
+.socials, .social{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    align-items: center;
+    margin-top: 3rem;
+}
+.social{
+    margin-top: auto;
+}
+.socials svg path:hover{
+    fill: var(--soft-red);
+}
+.show .logo{
+    fill: white;
+}
+.show .ol{
+    fill: var(--dark-blue);
+}
+.nav__item:hover{
+    color: var(--soft-red);
+}
+
 @media screen and (max-width: 700px) {
     .right{
         position: fixed;
@@ -287,8 +400,9 @@ body{
         align-items: center;
         background-color: var(--dark-blue);
         transition: .5s;
+        padding: 3rem;
     }
-    .show{
+    .show .right{
         top: 0;
     }
     .nav__list{
@@ -306,6 +420,7 @@ body{
         letter-spacing: 7px;
         
     }
+    
     .f{
         width: 70%;
         height: 1px;
@@ -343,6 +458,14 @@ body{
     }
     .tabs{
         flex-direction: row;
+        width: 60%;
+    }
+    .tabsp{
+        padding: 1rem;
+    }
+    .line2{
+        width: 60%;
+        margin:auto;
     }
     .line{
         display: none;
@@ -352,8 +475,41 @@ body{
     }
     .ans{
         width: fit-content;
+        text-align: initial;
+    }
+    
+    .features p{
+        width: fit-content;
     }
     .card{
         margin-right: 1rem;
+    }
+    .social{
+        display: none;
+    }
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    .left{
+        flex-direction: row;
+    }
+    .left p{
+    margin-top: 0;
+    margin-left: 2rem;
+    }
+    .socials, .social{
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        align-items: center;
+        margin-top: 0;
+    }
+    .form{
+        grid-template-columns: 400px 200px;
+        grid-gap: 2rem;
+        width: fit-content;
+        margin: auto;
     }
 }
