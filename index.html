@@ -116,7 +116,7 @@
             <div class="cont">
               <div class="question_title">
                 <p class="question">What is Bookmark?</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" class="arrows"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
               </div>
               <div class="answer">
                 <p class="ans1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
@@ -129,7 +129,7 @@
 
               <div class="question_title">
                 <p class="question">How can I request a new Browser?</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" class="arrows"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
               </div>
               <div class="answer">
                 <p class="ans1">
@@ -145,7 +145,7 @@
 
               <div class="question_title">
                 <p class="question">Is there a mobile app?</p>
-               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" class="arrows"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
               </div>
               <div class="answer">
                 <p class="ans1">
@@ -160,7 +160,7 @@
 
               <div class="question_title">
                 <p class="question">What about othe Chromium browsers?</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" class="arrows"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" class="arrow"/></svg>
               </div>
               <div class="answer">
                 <p class="ans1">
@@ -175,10 +175,15 @@
       <button class="bt">More Info</button>
   </div>
   <div class="newsletter">
-    <p>35,000+ ALREADY JOINED</p>
+    <p class="p">35,000+ ALREADY JOINED</p>
     <h2>Stay up-to-date with what we're doing</h2>
-    <div class="form">
-      <input type="text" placeholder="Enter your email address">
+    <div class="form valid" id="form" >
+      <div class="inp2">
+        <input type="text" placeholder="Enter your email address" id="mail" onkeyup="validate()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="error"><g fill="none" fill-rule="evenodd"><circle cx="10" cy="10" r="10" fill="#FA5959"/><g fill="#FFF" transform="translate(9 5)"><rect width="2" height="7" rx="1"/><rect width="2" height="2" y="8" rx="1"/></g></g></svg>
+
+        <p><i>Whoops, make sure it's an email</i></p>
+      </div>
       <button>Contact Us</button>
     </div>
   </div>

@@ -1,3 +1,4 @@
+
 const bar = document.querySelector('.hamburger');
 const bar2 = document.getElementById('ham');
 const menu = document.querySelector('.right');
@@ -58,7 +59,7 @@ const menu = document.querySelector('.right');
    const quest = document.querySelectorAll('.cont')
 
    quest.forEach(question=>{
-      const arrow = question.querySelector('.arrow');
+      const arrow = question.querySelector('.arrows');
 
    arrow.addEventListener('click', ()=>{
       quest.forEach(item=> {
@@ -71,3 +72,24 @@ const menu = document.querySelector('.right');
       question.classList.toggle('show-text');
    })
    })
+
+   
+
+   function validate(){
+
+      const form = document.getElementById('form');
+   const mail = document.getElementById('mail').value;
+   const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if(mail.match(pattern)){
+         form.classList.add('valid');
+         form.classList.remove('invalid');
+      }else{
+         form.classList.remove('valid');
+         form.classList.add('invalid');
+         console.log('hfhh');
+     }if(mail ==""){
+         form.classList.remove('valid');
+         form.classList.add('invalid');
+     }
+   }
